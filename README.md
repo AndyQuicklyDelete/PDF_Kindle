@@ -5,10 +5,7 @@ Create PDFs of Kindle Desktop App eBooks with Python and Autoit3 (Software takes
 
 1) Download Desktop Screenshot Capture Software like Greenshot (https://getgreenshot.org/) or Bumpshot (https://www.andyquickdelete.info/portfolio/static/Desktop/Bumpshot-1.0.6-win64.msi) and configure it to save screenshots to your Desktop and in a folder called **ScreenShots** the command to capture active window screenshots should be **shift+printscreen**
 
-2) Make sure Python > 3.8 is installed and add the following libraries using **pip**:
-  pip install Pillow
-  pip install fpdf
-  pip install pyautogui
+2) Make sure Python > 3.8 is installed and add the following libraries: **pip install Pillow fpdf pyautogui**
 
 3) Open Kindle and the book you wish to capture (make sure you are on page 1) locate the Kindle arrow: https://images.suck-o.com/static/images/image_uploads.file_upload.b1a197437223c13d.S2luZGxlLUFycm93LmpwZw==.jpg in the open document and find your mouse coordinates position on top of this arrow using **find_mouse_coordinates.py**. You should also get the top left, top right, bottom left, and bottom right positions of the document, these coordinates are for cropping the screenshots before turning them into a pdf. You will need to adjust these for your screen size inside the python script.
 
