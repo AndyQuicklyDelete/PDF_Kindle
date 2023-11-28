@@ -13,6 +13,6 @@ Create PDFs of Kindle Desktop App eBooks with Python and Autoit3 (Software takes
 
 5) Open **cropping_for_kindle.py** and change the variables located on lines 16, 17, 18, 19 to match your document using the coordinates you found in step 3.
 
-6) Close your Kindle Desktop app and run the **PDF_Kindle.au3** file. It will open the Kindle Desktop app and the last open document (which should be the book you want to copy). Make sure your screenshot capture software is running in the background, be sure to disable your screensaver temporarily. If a mistake is made you can hit the **ESC** key on your keyboard to halt the script and manually adjust everything again, I suggest doing this once or twice just to check everything is working properly.
+6) Close your Kindle Desktop app and run the **PDF_Kindle.au3** file. It will open the Kindle Desktop app and the last open document (which should be the book you want to copy). Make sure your screenshot capture software is running in the background, be sure to disable your screensaver and Desktop sleep temporarily. If a mistake is made you can hit the **ESC** key on your keyboard to halt the script and manually adjust everything again, I suggest doing this once or twice just to check everything is working properly.
 
 7) Finally when all that is done, you can run the python script **cropping_for_kindle.py**. Once completed a pdf will be saved to the same directory as the python script in a folder called output. Enjoy :-) 
