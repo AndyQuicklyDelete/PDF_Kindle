@@ -16,10 +16,10 @@ Func PDF_Kindle()
 
 	; User Settings
 	$path_to_kindle = "C:\Program Files (x86)\Amazon\Kindle\Kindle.exe"
-	$window_title = "Desktop-PC - Kindle - Srimad Bhagavatam"
+	$window_title = "Desktop-PC"
 
-	; Number of Pages in eBook to Screen Capture
-	$num_pages = 440
+	; Number of estimated Pages
+	$num_pages = 125
 
 	; Run Kindle and Sleep to Wait for Program Launch
 	Run($path_to_kindle)
@@ -28,23 +28,38 @@ Func PDF_Kindle()
 	; Activate Window
 	WinActivate($window_title, "")
 	
-	; First Page Setup & ScreenShot
-	Send("{SHIFTDOWN}{PRINTSCREEN}") ; Captures ScreenShot using Bumpshot Key Binding
-	Sleep(2000)
-	Send("{SHIFTUP}") ; Release Screen Capture Key
+	; ### OLD METHOD ###
+	; Return to page one
+	; Send("{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}")
+	; Send("1")
+	; Send("{Enter}")
+	; ### OLD METHOD END ###
 	
-	Sleep(1000)
-	MouseClick("Left", 1250, 555, 1, 0) ; Emulate Mouseclick to navigate open eBook
+	; First Page Setup & ScreenShot
+	; Send("{SHIFTDOWN}{PRINTSCREEN}") ; Captures ScreenShot using Bumpshot Key Binding
+	; Sleep(2000)
+	; Send("{SHIFTUP}") ; Release Screen Capture Key
+	
+	; Sleep(1000)
+	; MouseClick("Left", 1230, 555, 1, 0)
+	
+	; ### OLD METHOD ###
+	; Tab Between Window Controls and Send Enter to go to the Second Page
+	; Send("{TAB}")		
+	; Send("{Enter}")
+	; ### OLD METHOD END ###
 
-	; Starting from the Second Page Continue to Loop Pages & Capture ScreenShots
-	Local $i = 2
+	; Starting from the first page continue to capture screenShots
+	Local $i = 1
 	While $i <= $num_pages
 		Sleep(2000) 
 		Send("{SHIFTDOWN}{PRINTSCREEN}") ; Captures ScreenShot using Bumpshot Key Binding
 		Sleep(2000) 
 		Send("{SHIFTUP}") ; Release Screen Capture Key
-		MouseClick("Left", 1250, 555, 1, 0) ; Emulate Mouseclick to navigate open eBook
-		
+		MouseClick("Left", 1230, 555, 1, 0)
+		; ### OLD METHOD ###
+		;Send("{Enter}") ; Send Enter to go to the Next Page
+		; ### OLD METHOD END ###
 		$i = $i + 1
 		If @HotKeyPressed = "{ESC}" Then ExitLoop
 	WEnd

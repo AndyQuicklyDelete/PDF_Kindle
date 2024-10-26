@@ -13,10 +13,10 @@ pdf_dir = os.getcwd() + "\\pdf\\"
 # Adjust to your specification. I used Photoshops info window to find the
 # Left/Top and Right/Bottom values
 
-left = 447
-top = 101
-right = 1056
-bottom = 1010
+left = 438
+top = 102
+right = 1065
+bottom = 1000
 
 ## END BASIC USER SETTINGS ##
 
