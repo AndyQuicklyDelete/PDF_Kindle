@@ -9,7 +9,7 @@ Create PDFs of Kindle Desktop App eBooks with Python and Autoit3 (Software takes
 
 3) Open Kindle and the document you wish to capture (make sure you are on page 1) locate the Kindle navigation arrow in the open document and find the mouse coordinates position on top of this arrow using **find_mouse_coordinates.py**. You should also get the **top left, top right, bottom left, and bottom right** readable area of the document, these coordinates are for cropping the screenshots before turning them into a pdf.
 
-4) Open PDF_Kindle.au3 and change the **$window_title = "Desktop-PC"** variable to that of your open document. Change the **MouseClick("Left", 1250, 555, 1, 0)** function values of 1250, and 555 to match the Kindle arrow position found using **mouse_coordinates.py**. The MouseClick function is found in two locations inside the script. You also need to change the **$num_pages = 440** variable to match your open document.
+4) Open PDF_Kindle.au3 and change the **$window_title = "Desktop-PC"** variable to that of your open document. Change the **MouseClick("Left", 1250, 555, 1, 0)** function values of 1250, and 555 to match the Kindle arrow position found using **mouse_coordinates.py**. The MouseClick function is found in with in the While loop (**line num: 38**) inside the script. You also need to change the **$num_pages = 440** variable to match your open document.
 
 5) Open **cropping_for_kindle.py** and change the variables located on lines 16, 17, 18, 19 to match your document using the coordinates you found in step 3.
 
