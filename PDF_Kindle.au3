@@ -19,7 +19,7 @@ Func PDF_Kindle()
 	$window_title = "Desktop-PC"
 
 	; Number of estimated Pages
-	$num_pages = 125
+	$num_pages = 440
 
 	; Run Kindle and Sleep to Wait for Program Launch
 	Run($path_to_kindle)
@@ -36,9 +36,6 @@ Func PDF_Kindle()
 		Sleep(2000) 
 		Send("{SHIFTUP}") ; Release Screen Capture Key
 		MouseClick("Left", 1250, 555, 1, 0)
-		; ### OLD METHOD ###
-		;Send("{Enter}") ; Send Enter to go to the Next Page
-		; ### OLD METHOD END ###
 		$i = $i + 1
 		If @HotKeyPressed = "{ESC}" Then ExitLoop
 	WEnd
