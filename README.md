@@ -3,7 +3,7 @@ Create PDFs of Kindle Desktop App eBooks with Python and Autoit3 (Software takes
 
 **Preparation**
 
-1) Download Desktop Screenshot Capture Software like Greenshot (https://getgreenshot.org/) and configure it to save screenshots to your Desktop and in a folder called **ScreenShots**. The command to capture active window screenshots should be **shift+printscreen**
+1) Download Desktop Screenshot Capture Software like Greenshot (https://getgreenshot.org/) and configure it to save screenshots to your Desktop and in a folder called **ScreenShots** with a timestamp prepended to the filename. The command to capture active window screenshots should be **shift+printscreen**
 
 2) Make sure Python > 3.8 is installed and add the following libraries: **pip install Pillow fpdf pyautogui**
 
