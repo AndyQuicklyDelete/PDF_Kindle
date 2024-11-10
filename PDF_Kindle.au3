@@ -27,27 +27,6 @@ Func PDF_Kindle()
 	
 	; Activate Window
 	WinActivate($window_title, "")
-	
-	; ### OLD METHOD ###
-	; Return to page one
-	; Send("{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}{TAB}")
-	; Send("1")
-	; Send("{Enter}")
-	; ### OLD METHOD END ###
-	
-	; First Page Setup & ScreenShot
-	; Send("{SHIFTDOWN}{PRINTSCREEN}") ; Captures ScreenShot using Bumpshot Key Binding
-	; Sleep(2000)
-	; Send("{SHIFTUP}") ; Release Screen Capture Key
-	
-	; Sleep(1000)
-	; MouseClick("Left", 1230, 555, 1, 0)
-	
-	; ### OLD METHOD ###
-	; Tab Between Window Controls and Send Enter to go to the Second Page
-	; Send("{TAB}")		
-	; Send("{Enter}")
-	; ### OLD METHOD END ###
 
 	; Starting from the first page continue to capture screenShots
 	Local $i = 1
@@ -56,7 +35,7 @@ Func PDF_Kindle()
 		Send("{SHIFTDOWN}{PRINTSCREEN}") ; Captures ScreenShot using Bumpshot Key Binding
 		Sleep(2000) 
 		Send("{SHIFTUP}") ; Release Screen Capture Key
-		MouseClick("Left", 1230, 555, 1, 0)
+		MouseClick("Left", 1250, 555, 1, 0)
 		; ### OLD METHOD ###
 		;Send("{Enter}") ; Send Enter to go to the Next Page
 		; ### OLD METHOD END ###
